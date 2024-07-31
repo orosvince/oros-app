@@ -1,11 +1,17 @@
-// src/components/Task.jsx
 import React from 'react';
 
 const Task = ({ task, index, toggleStatus }) => (
-  <li>
-    {index + 1}. {task.description} | {task.assignee} | {task.status === 'Pending' ? task.deadline : ''} | {task.status} 
-    <button onClick={() => toggleStatus(index)}>Toggle Status</button>
-  </li>
+  <tr>
+    <td>{index + 1}</td>
+    <td>{task.description}</td>
+    <td>{task.assignee}</td>
+    <td>{task.status === 'Pending' ? task.deadline : ''}</td>
+    <td>
+      {task.status}
+      <button onClick={() => toggleStatus(index)}>Toggle Status</button>
+    </td>
+  </tr>
 );
 
 export default Task;
+  

@@ -1,4 +1,3 @@
-// src/components/Tasks.jsx
 import React, { useState, useEffect } from 'react';
 import Task from './Task';
 import SearchFilter from './SearchFilter';
@@ -39,16 +38,25 @@ const Tasks = () => {
     <div>
       <h1>Tasks</h1>
       <SearchFilter tasks={tasks} setFilteredTasks={setFilteredTasks} />
-      <ul>
-        <li>
-          <strong>No.</strong> | <strong>Task Description</strong> | <strong>Assignee</strong> | <strong>Deadline</strong> | <strong>Status</strong>
-        </li>
-        {filteredTasks.map((task, index) => (
-          <Task key={index} task={task} index={index} toggleStatus={toggleStatus} />
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Task Description</th>
+            <th>Assignee</th>
+            <th>Deadline</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredTasks.map((task, index) => (
+            <Task key={index} task={task} index={index} toggleStatus={toggleStatus} />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
 export default Tasks;
+

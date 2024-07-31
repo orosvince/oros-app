@@ -1,4 +1,4 @@
-// src/components/SearchFilter.jsx
+
 import React, { useState } from 'react';
 
 const SearchFilter = ({ tasks, setFilteredTasks }) => {

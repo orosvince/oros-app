@@ -1,5 +1,6 @@
-// src/App.jsx
+
 import React from 'react';
+import './style.css';
 import Tasks from './components/Tasks';
 
 function App() {
