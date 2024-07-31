@@ -5,7 +5,7 @@ const Task = ({ task, index, toggleStatus }) => (
     <td>{index + 1}</td>
     <td>{task.description}</td>
     <td>{task.assignee}</td>
-    <td>{task.status === 'Pending' ? task.deadline : ''}</td>
+    <td>{task.deadline}</td>
     <td>
       {task.status}
       <button onClick={() => toggleStatus(index)}>Toggle Status</button>
@@ -14,4 +14,3 @@ const Task = ({ task, index, toggleStatus }) => (
 );
 
 export default Task;
-  

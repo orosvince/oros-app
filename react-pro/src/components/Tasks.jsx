@@ -15,12 +15,11 @@ const Tasks = () => {
     };
     const tasksArray = [];
     for (let i = 1; i <= 10; i++) {
-      const isPending = i <= 6;
       tasksArray.push({
         description: `Task ${i}`,
         assignee: randomAssignees[Math.floor(Math.random() * randomAssignees.length)],
-        deadline: isPending ? generateRandomDate(30) : null,
-        status: isPending ? 'Pending' : 'Completed',
+        deadline: generateRandomDate(30),
+        status: i <= 6 ? 'Pending' : 'Completed',
       });
     }
     setTasks(tasksArray);
@@ -59,4 +58,3 @@ const Tasks = () => {
 };
 
 export default Tasks;
-

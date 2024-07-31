@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 const SearchFilter = ({ tasks, setFilteredTasks }) => {
@@ -28,3 +27,4 @@ const SearchFilter = ({ tasks, setFilteredTasks }) => {
 };
 
 export default SearchFilter;
+
